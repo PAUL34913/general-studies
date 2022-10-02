@@ -1,2 +1,2 @@
-# javascriptstudies
-Javascript studies and resources
+# Javascript Studies and Resources
+
