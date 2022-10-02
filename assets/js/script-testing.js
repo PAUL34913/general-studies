@@ -1,28 +1,35 @@
-function splitString(str) {
-  
-    let arr = [];
-    let str1 = '';
+function isJumping(number) {
 
-    console.log(arr);
-    console.log(str1);
+    let numText = number.toString();
 
-    for (let i = 0; i < str.length; i+=2) {
+    console.log('The number you have entered is: ' + numText);
+    console.log('There are ' + numText.length + ' numbers in the string');
 
-        if (str[i+1] === undefined) {
-
-            str1 = str[i] + '_';
-                       
-        } else {
-
-            str1 = str[i] + str[i+1]
-            console.log(str1);
-        }
-
-        arr.push(str1);
-        console.log(arr);
+    if (numText.length < 2) {
+        console.log('JUMPING');
+        return 'JUMPING';
     }
 
-    return arr;
+    console.log('First number is: ' + numText[0]);
+    console.log('');
+
+    for (i = 1; i < numText.length; i++) {
+
+        if (Math.abs(numText[i] - numText[i-1]) > 1) {
+            console.log('NOT JUMPING');
+            return 'NOT JUMPING';
+        } else {
+            console.log('Next number is: ' + numText[i]);
+            console.log('');
+            
+        }
+
+    }
+
+    console.log('JUMPING');
+
+    return 'JUMPING';
+
 }
 
-splitString('123 4');
+isJumping(9898765);

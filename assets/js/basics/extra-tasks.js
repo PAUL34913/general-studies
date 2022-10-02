@@ -125,3 +125,133 @@ function splitString(str) {
 
     return arr;
 }
+
+//Scrolling Text
+
+function scrollingText(word) {
+
+    let arr = [word.toUpperCase()];
+    let str1 = word
+
+    console.log(arr);
+
+    for (let i = 0; i < word.length -1; i++) {
+
+        str1 = str1.slice(1, word.length) + str1.slice(0, 1);
+        str1 =str1.toUpperCase();
+        console.log(str1);
+
+        arr.push(str1);
+        console.log(arr);
+
+    }
+
+    return arr;
+
+}
+
+scrollingText('robot');
+
+//Special Numbers
+
+function isSpecialNumber(n) {
+    
+    let numText = n.toString();
+    let msg = '';
+
+    console.log('*** Eagle OS v1.0 ***');
+    console.log('');
+    console.log('The number you entered is: ' + numText);
+    console.log('');
+    console.log('The number is ' + numText.length + ' digits long.');
+    console.log('');
+    console.log('--------------------------------');
+
+    for (let i = 0; i < numText.length; i++) {
+
+        if (numText[i] > 5) {
+            console.log(numText[i]);
+            console.log('NOT!!');
+            msg = 'NOT!!';
+            return 'NOT!!';
+            
+        } else {
+            console.log(numText[i]);
+            console.log('Special!!');
+            msg = 'Special!!';
+        }
+        
+    }
+
+    return 'Special!!';
+
+}
+
+isSpecialNumber(369);
+
+//Is Tidy
+
+function isTidy(number) {
+
+    let numText = number.toString();
+
+    console.log(numText);
+    console.log(numText.length);
+
+    for (let i = 1; i < numText.length; i++) {
+
+        if (numText[i] < numText[i-1]) {
+            console.log('false');
+            return false;
+        }
+
+    }
+
+    console.log('true');
+    return true;
+
+}
+
+isTidy(12);
+
+//Is Jumping
+
+function isJumping(number) {
+
+    let numText = number.toString();
+
+    console.log('The number you have entered is: ' + numText);
+    console.log('There are ' + numText.length + ' numbers in the string');
+
+    if (numText.length < 2) {
+        console.log('JUMPING');
+        return 'JUMPING';
+    }
+
+    console.log('First number is: ' + numText[0]);
+    console.log('');
+
+    for (let i = 1; i < numText.length; i++) {
+
+        if (Math.abs(numText[i] - numText[i-1]) > 1) {
+
+            console.log('NOT JUMPING');
+            return 'NOT JUMPING';
+            
+        } else if ((Math.abs(numText[i] - numText[i-1]) === 0)) {
+
+            console.log('NOT JUMPING');
+            return 'NOT JUMPING';
+
+        } else {
+            
+            console.log('Next number is: ' + numText[i]);
+            console.log('');
+            
+        }
+    }
+
+    console.log('JUMPING');
+
+    return 'JUMPING';
+}
