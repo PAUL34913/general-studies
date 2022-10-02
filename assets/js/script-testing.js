@@ -1,44 +1,38 @@
-function checkNumber(number) {
+function splitString(str) {
+  
+    let arr = [];
+    let str1 = '';
 
-    let positive = true;
-    let even = true;
-    let byTen = true;
-    let myArray = [];
-    
-    if (Math.sign(number) === 1) {
-        console.log('true');
-        positive = true;        
-    }
+    console.log(arr);
+    console.log(str1);
 
-    if (Math.sign(number) !== 1) {
-        console.log('false');
-        positive = false;
+    for (let i = 0; i < str.length; i+=2) {
+
+        if (str[i+1] === undefined) {
+
+            str1 = str[i] + '_';
+            
+        } else {
+
+            str1 = str[i] + str[i+1]
+            console.log(str1);
+
+        }
+
         
-    }
-    
-    if (number % 2 === 0) {
-        console.log('true');
-        even = true;
+
+
+        arr.push(str1);
+        console.log(arr);
+
     }
 
-    if (number % 2 !== 0) {
-        console.log('false');
-        even = false;
-    }
+    return arr;
 
-    if (number % 10 === 0) {
-        console.log('true');
-        byTen = true;
-    }
-
-    if (number % 10 !== 0) {
-        console.log('true');
-        byTen = false;
-    }
-
-    myArray = [positive, even, byTen];
-    console.log(myArray);
-    return myArray;
 }
 
-checkNumber(3);
+
+
+
+
+splitString('123 4');
