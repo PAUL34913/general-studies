@@ -1,3 +1,7 @@
+/* Extra Tasks */
+
+//Check number is positive, even and divisible by ten
+
 function checkNumber(number) {
 
     let positive = true;
