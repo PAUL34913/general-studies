@@ -1,2 +1,2 @@
-# Javascript Studies and Resources
+# General Studies and Resources
 
