@@ -2,7 +2,7 @@
 
 -- Styling
 
-SQL language != case sensitive (But please use CAPS for KEYWORDS)
+SQL (Structured Query Language) != case sensitive (But please use CAPS for KEYWORDS)
 
 Start each logical part of the query with a new line.
 
@@ -21,19 +21,12 @@ Primarily 3 types for SQL;
     Number 
     Date/Time
 
+
 /* COMMENTING OUT CODE */
 
 -- Single Line
 
--- SELECT title
-FROM movie;
-
--- Multiple Line
-
-/*
-SELECT title
-FROM movie; 
-*/
+/* Multiple Line */
 
 
 /* SELECT */ 
