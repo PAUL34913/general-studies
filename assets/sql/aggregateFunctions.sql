@@ -85,3 +85,36 @@ WHERE condition;
 
 SELECT AVG(price) AS average_price
 FROM fruits;
+
+
+-- Get subjects beginning with letter 'E'
+
+SELECT COUNT (*) AS number_of_subjects
+FROM subject
+WHERE name LIKE'E%';
+
+-- Get number of working staff
+
+SELECT COUNT (*) AS number_of_staff
+FROM staff
+WHERE date_of_dismissal IS NULL AND position = 'teacher' AND salary >= 9000;
+
+-- Get calories by dish name
+
+SELECT SUM (calories) AS total_calories
+FROM dish
+WHERE name IN ('Baked potato', 'Crumble', 'Meatball');
+
+-- Get last name of last pupil
+
+SELECT last_name AS last_name
+FROM pupil
+WHERE NOT city = 'Kyiv' 
+ORDER BY last_name DESC
+LIMIT 1;
+
+-- Get max salary for 'teacher'
+
+SELECT MAX (salary) AS max_salary
+FROM staff
+WHERE date_of_dismissal IS NULL AND position = 'teacher';
